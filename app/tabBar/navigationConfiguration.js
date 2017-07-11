@@ -4,12 +4,20 @@ import { TabNavigator } from 'react-navigation'
 import TabOneNavigation from '../tabOne/views/TabOneNavigation'
 import TabTwoNavigation from '../tabTwo/views/TabTwoNavigation'
 import TabThreeNavigation from '../tabThree/views/TabThreeNavigation'
+import TabProfileScreen from '../tabProfile/views/TabProfile'
 
 
 const routeConfiguration = {
   TabOneNavigation: { screen: TabOneNavigation },
   TabTwoNavigation: { screen: TabTwoNavigation },
   TabThreeNavigation: { screen: TabThreeNavigation },
+  TabProfile: {
+    screen: TabProfileScreen,
+    navigationOptions: {
+      tabBarLabel: 'Profile',
+      tabBarIcon: ({ tintColor }) => <Icon size={20} name={'cogs'} color={tintColor} />,
+    },
+  },
 }
 
 const tabBarConfiguration = {
